@@ -1,0 +1,3 @@
+description = "Audit and optimize an existing Gemini skill for performance (context thinning)."
+argument-hint = "--skill <skill_name>"
+prompt = "Activating the gskills-forge skill: refactor. Please process the following input or context: {{args}}."
