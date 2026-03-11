@@ -29,8 +29,12 @@ instructions: >
 **Description**: Migrate and "flatten" Claude Code skills into Gemini's orchestrator pattern.
 **Procedure**: @./commands/convert.md
 
+### `/gskills-forge:audit`
+**Description**: Perform a full-spectrum diagnostic (Scan + Audit) on an existing Gemini skill.
+**Procedure**: @./commands/audit.md
+
 ### `/gskills-forge:refactor`
-**Description**: Audit and optimize an existing Gemini skill for performance (context thinning).
+**Description**: Optimize an existing Gemini skill based on audit findings or specific refactor goals.
 **Procedure**: @./commands/refactor.md
 
 ## Operational Standards

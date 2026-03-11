@@ -1,16 +1,25 @@
 ---
-description: "Audit and optimize an existing Gemini skill for performance (context thinning)."
+description: "Optimize an existing Gemini skill based on audit findings or specific refactor goals."
 ---
 
 # Command: /gskills-forge:refactor
-**Goal**: Audit and optimize an existing Gemini skill for performance (context thinning).
+**Goal**: Apply architectural optimizations to an existing Gemini skill for better performance and maintainability.
 
 ## Procedure
-1. **Audit**: Call `list_directory` and `read_file` on `SKILL.md`.
-2. **Context Thinning**: 
-   - Move procedural logic > 2KB to `references/`.
-   - Ensure imports use correct syntax `@./references/file.md`.
-3. **Optimizing Tools**:
-   - Check if `grep_search` is used efficiently.
+1. **Report Review**: 
+   - Search session history for `# GSG-DIAGNOSTIC-REPORT`.
+   - If not in history, check for `.gemini/audit-report.md`.
+   - If no report found, run a quick scan.
+2. **Context Merger**: 
+   - Combine diagnostic findings with any user-provided `{{args}}`.
+   - Prioritize user input if it conflicts with audit recommendations.
+3. **Execution (Context Thinning)**: 
+   - Extract procedural logic/documentation > 2KB from `SKILL.md` to `references/`.
+   - Update `SKILL.md` with `@./references/file.md` imports.
+4. **Execution (Tool Optimization)**:
    - Consolidate multiple turns into parallel tool calls.
-4. **Validation**: Test and confirm no instruction regression.
+   - Refine `grep_search` patterns for efficiency.
+5. **Final Validation**:
+   - Re-run structural checks (frontmatter, syntax).
+   - Confirm no regression in instructions.
+6. **Summary**: Report on Imports Fixed, Tools Mapped, and Context Thinned (bytes).

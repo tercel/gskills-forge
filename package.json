@@ -1,6 +1,6 @@
 {
   "name": "gskills-forge",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Gemini CLI Skill Architect — specialized in scaffolding, converting (Claude to Gemini), and refactoring/optimizing skills.",
   "main": "index.js",
   "scripts": {
